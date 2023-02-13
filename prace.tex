@@ -1,0 +1,26 @@
+\documentclass[12pt,a4paper]{report}
+\input{preamble}
+%% Titulní strana a různé povinné informační strany
+\begin{document}
+\include{titulka}
+
+%%% Strana s automaticky generovaným obsahem práce
+\tableofcontents
+
+%%% Jednotlivé kapitoly práce jsou pro přehlednost uloženy v samostatných souborech
+\include{uvod}
+
+\include{teoreticka_cast}
+
+\include{prakticka_cast}
+
+\include{sbirka/sbirka}
+
+\include{zaver}
+
+%%% Seznam použité literatury
+\include{literatura}
+
+
+\openright
+\end{document}
