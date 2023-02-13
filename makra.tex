@@ -7,23 +7,23 @@
 % sázel příčetněji a nevynechával nad nimi spoustu místa. Směle ignorujte.
 \makeatletter
 \def\@makechapterhead#1{
-  {\parindent \z@ \raggedright \normalfont
-   \Huge\bfseries \thechapter. #1
-   \par\nobreak
-   \vskip 20\p@
-}}
+        {\parindent \z@ \raggedright \normalfont
+    \Huge\bfseries \thechapter. #1
+    \par\nobreak
+    \vskip 20\p@
+    }}
 \def\@makeschapterhead#1{
-  {\parindent \z@ \raggedright \normalfont
-   \Huge\bfseries #1
-   \par\nobreak
-   \vskip 20\p@
-}}
+        {\parindent \z@ \raggedright \normalfont
+    \Huge\bfseries #1
+    \par\nobreak
+    \vskip 20\p@
+    }}
 \makeatother
 
 % Toto makro definuje kapitolu, která není očíslovaná, ale je uvedena v obsahu.
 \def\chapwithtoc#1{
-\chapter*{#1}
-\addcontentsline{toc}{chapter}{#1}
+    \chapter*{#1}
+    \addcontentsline{toc}{chapter}{#1}
 }
 
 % Trochu volnější nastavení dělení slov, než je default.
@@ -52,11 +52,11 @@
 %%% Prostředí pro důkazy
 
 \newenvironment{dukaz}{
-  \par\medskip\noindent
-  \textit{Důkaz}.
-}{
-\newline
-\rightline{$\qedsymbol$}
+    \par\medskip\noindent
+    \textit{Důkaz}.
+        }{
+    \newline
+    \rightline{$\qedsymbol$}
 }
 
 %%% Prostředí pro sazbu kódu, případně vstupu/výstupu počítačových
