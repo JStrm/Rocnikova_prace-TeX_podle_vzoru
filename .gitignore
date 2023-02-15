@@ -28,3 +28,4 @@
 *.iml
 *.xmpi
 .idea
+*.bcf

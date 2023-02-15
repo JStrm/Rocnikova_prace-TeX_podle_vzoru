@@ -1,5 +1,3 @@
-%%% Hlavní soubor. Zde se definují základní parametry a odkazuje se na ostatní části. %%%
-
 %% Verze pro jednostranný tisk:
 % Okraje: levý 40mm, pravý 25mm, horní a dolní 25mm
 % (ale pozor, LaTeX si sám přidává 1in)
@@ -30,7 +28,6 @@
 
 %% Přepneme na českou sazbu a fonty Latin Modern
 \usepackage[czech]{babel}
-
 \usepackage{lmodern}
 \usepackage[T1]{fontenc}
 \usepackage{textcomp}
@@ -48,18 +45,20 @@
 % (čtverečky, hvězdičky, tužtičky, nůžtičky, ...)
 \usepackage{bm}             % tučné symboly (příkaz \bm)
 \usepackage{graphicx}       % vkládání obrázků
+	\graphicspath{ {img} }
 \usepackage{fancyvrb}       % vylepšené prostředí pro strojové písmo
-\usepackage{indentfirst}    % zavede odsazení 1. odstavce kapitoly      % zajištuje možnost odkazovat na literaturu
-% stylem AUTOR (ROK), resp. AUTOR [ČÍSLO]
+\usepackage{indentfirst}    % zavede odsazení 1. odstavce kapitoly     
+
 \usepackage[backend=biber,style=numeric,sorting=ynt]{biblatex}
-% obrázků a tabulek do obsahu
+\addbibresource{zdroje.bib}
+
 \usepackage{icomma}         % inteligetní čárka v matematickém módu
 \usepackage{dcolumn}        % lepší zarovnání sloupců v tabulkách
 \usepackage{booktabs}       % lepší vodorovné linky v tabulkách
 \usepackage{paralist}       % lepší enumerate a itemize
 \usepackage{xcolor}         % barevná sazba
 
-% Fix for cmidrule and cline
+%% Fix pro cmidrule and cline kvůli češtině
 \usepackage{regexpatch}
 \makeatletter
 % Change the `-` delimiter to an active character
@@ -67,7 +66,7 @@
 \xpatchparametertext\@cline{-}{\cA-}{}{}
 \makeatother
 
-\graphicspath{ {img} }
+
 
 %%% Údaje o práci
 \title{
@@ -89,14 +88,5 @@
 \hypersetup{unicode}
 \hypersetup{breaklinks=true}
 
-%% Definice různých užitečných maker (viz popis uvnitř souboru)
-%% \include{makra}
-
-%% přídá obdelník
-\newcommand{\rectangle}{
-    \ooalign{$\sqsubset\mkern2mu$\cr$\mkern9mu\sqsupset$\cr}%
-}
-
-
-\addbibresource{zdroje.bib}
-
+%% Znak obdelník
+\newcommand{\rectangle}{\ooalign{$\sqsubset\mkern2mu$\cr$\mkern9mu\sqsupset$\cr}}
