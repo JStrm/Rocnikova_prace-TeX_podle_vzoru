@@ -11,13 +11,12 @@
 
 % \bibliographystyle{czplainnat}    %% Autor (rok) s českými spojkami
 % \bibliographystyle{plainnat}    %% Autor (rok) s anglickými spojkami
-\bibliographystyle{unsrt}       %% [číslo]
+      %% [číslo]
 
 \nocite{*}
 
-\renewcommand{\bibname}{Zdroje}
-
+\addcontentsline{toc}{chapter}{Zdroje}
+\printbibliography[title={Bibliografie a další zdroje}]
 %%% Vytvoření seznamu literatury. Pozor, pokud jste necitovali ani jednu
 %%% položku, seznam se automaticky vynechá.
 
-\bibliography{zdroje}
