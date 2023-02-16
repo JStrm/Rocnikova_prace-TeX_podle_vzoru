@@ -5,10 +5,7 @@
 \begin{document}
 %% Titulní strana a různé povinné informační strany
     \include{titulka}
-
-%%% Strana s automaticky generovaným obsahem práce
-    \tableofcontents
-
+  
 %%% Jednotlivé kapitoly práce jsou pro přehlednost uloženy v samostatných souborech
     \include{uvod}
 
@@ -23,5 +20,10 @@
 %%% Seznam použité literatury
     \include{zdroje}
 
+	\addcontentsline{toc}{chapter}{Seznam obrázků}
+	\listoffigures
+	\newpage
+	\addcontentsline{toc}{chapter}{Seznam tabulek}
+	\listoftables
     \openright
 \end{document}
